@@ -11,18 +11,23 @@ import UIKit
 class SaveApproachViewController: UIViewController {
 
     var currentExercise: String?
-
     var currentTrain: Exercise?
+    
+    var image: UIImage = UIImage(named: "timer_img.png")!
     
     
    
-    
+    @IBOutlet weak var timerButton: UIButton!
     @IBOutlet weak var repeatsTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
-    
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timerButton.setImage(image, for: .normal)
+       
+     
 
         navigationItem.title = currentExercise
         tableView.delegate = self
@@ -48,7 +53,11 @@ class SaveApproachViewController: UIViewController {
     
     
  
-
+    @IBAction func timerTapped(_ sender: UIButton) {
+        let timerVC = CountdownViewController()
+        show(timerVC, sender: nil)
+    }
+    
     @IBAction func recordButtonTapped(_ sender: Any) {
         
         

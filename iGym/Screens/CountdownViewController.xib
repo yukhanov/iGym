@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountdownViewController" customModule="iGym" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="09m-xh-Xui" id="sAj-k5-VtA"/>
+                <outlet property="sliderOutlet" destination="oRt-ex-hfT" id="y4G-1M-rxg"/>
+                <outlet property="startButton" destination="Zf4-PK-9Ht" id="YE5-5u-fNV"/>
+                <outlet property="stopButton" destination="dml-RW-evb" id="1bf-zz-XCF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="5" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="oRt-ex-hfT">
+                    <rect key="frame" x="98" y="309" width="218" height="31"/>
+                    <connections>
+                        <action selector="slider:" destination="-1" eventType="valueChanged" id="Nwv-TS-Mzw"/>
+                    </connections>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zf4-PK-9Ht">
+                    <rect key="frame" x="74" y="429" width="112" height="38"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="112" id="tzs-A1-Wa3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title=" Старт">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="startTapped:" destination="-1" eventType="touchUpInside" id="uZ5-mO-te3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dml-RW-evb">
+                    <rect key="frame" x="222" y="429" width="112" height="38"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="112" id="Zfi-MA-uhA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="Стоп">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="stopTapped:" destination="-1" eventType="touchUpInside" id="Cnl-hc-XzE"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 секунд" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09m-xh-Xui">
+                    <rect key="frame" x="100" y="160" width="214" height="39.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oRt-ex-hfT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0MK-Es-Fyg"/>
+                <constraint firstItem="oRt-ex-hfT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="Bqx-Eo-AIO"/>
+                <constraint firstItem="dml-RW-evb" firstAttribute="top" secondItem="oRt-ex-hfT" secondAttribute="bottom" constant="90" id="HKZ-nZ-KyR"/>
+                <constraint firstItem="09m-xh-Xui" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UTo-0t-qWD"/>
+                <constraint firstItem="09m-xh-Xui" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="116" id="XMk-uf-UZv"/>
+                <constraint firstItem="dml-RW-evb" firstAttribute="leading" secondItem="Zf4-PK-9Ht" secondAttribute="trailing" constant="36" id="Zfu-wj-HkZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oRt-ex-hfT" secondAttribute="trailing" constant="100" id="bx5-CO-TjR"/>
+                <constraint firstItem="Zf4-PK-9Ht" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="74" id="gGE-n6-e1I"/>
+                <constraint firstItem="dml-RW-evb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="h3w-DG-Hjy"/>
+                <constraint firstItem="09m-xh-Xui" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="kD8-NF-tYJ"/>
+                <constraint firstItem="Zf4-PK-9Ht" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="p1s-6P-wfd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="09m-xh-Xui" secondAttribute="trailing" constant="100" id="p36-1l-elW"/>
+                <constraint firstItem="Zf4-PK-9Ht" firstAttribute="top" secondItem="oRt-ex-hfT" secondAttribute="bottom" constant="90" id="vtx-Cx-X3C"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="131.91964285714286"/>
+        </view>
+    </objects>
+</document>

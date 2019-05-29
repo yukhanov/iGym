@@ -36,6 +36,10 @@
 		B8A12A27224A4BB400F4132D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A12A26224A4BB400F4132D /* CustomButton.swift */; };
 		B8A12A2B224A4DC300F4132D /* LocalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A12A2A224A4DC300F4132D /* LocalModel.swift */; };
 		B8A12A2D224A4E4600F4132D /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A12A2C224A4E4600F4132D /* Exercise.swift */; };
+		B8BB92EE229E61A800486484 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB92EC229E61A800486484 /* CountdownViewController.swift */; };
+		B8BB92EF229E61A800486484 /* CountdownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8BB92ED229E61A800486484 /* CountdownViewController.xib */; };
+		B8BB92F6229EA9E600486484 /* timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8BB92F5229EA9E500486484 /* timer.mp3 */; };
+		B8BB92F9229EAA6500486484 /* timer_img.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BB92F8229EAA6200486484 /* timer_img.png */; };
 		B8C550A4229D72AC00F2E7FE /* CurrentTrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C550A3229D72AC00F2E7FE /* CurrentTrainingCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,10 @@
 		B8A12A26224A4BB400F4132D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B8A12A2A224A4DC300F4132D /* LocalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalModel.swift; sourceTree = "<group>"; };
 		B8A12A2C224A4E4600F4132D /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		B8BB92EC229E61A800486484 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		B8BB92ED229E61A800486484 /* CountdownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountdownViewController.xib; sourceTree = "<group>"; };
+		B8BB92F5229EA9E500486484 /* timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timer.mp3; sourceTree = "<group>"; };
+		B8BB92F8229EAA6200486484 /* timer_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer_img.png; sourceTree = "<group>"; };
 		B8C550A3229D72AC00F2E7FE /* CurrentTrainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentTrainingCell.xib; sourceTree = "<group>"; };
 		C7F2E1EB4E68F71FAA96E408 /* Pods-iGym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGym.release.xcconfig"; path = "Pods/Target Support Files/Pods-iGym/Pods-iGym.release.xcconfig"; sourceTree = "<group>"; };
 		E05F0F262794423968C205C6 /* Pods-iGym.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGym.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iGym/Pods-iGym.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +155,8 @@
 				B8A12A0A224A458000F4132D /* AppDelegate.swift */,
 				B8A12A26224A4BB400F4132D /* CustomButton.swift */,
 				B8A12A11224A458400F4132D /* Assets.xcassets */,
+				B8BB92F8229EAA6200486484 /* timer_img.png */,
+				B8BB92F5229EA9E500486484 /* timer.mp3 */,
 				B8A12A13224A458400F4132D /* LaunchScreen.storyboard */,
 				B815EA67225CAE7800FADDC5 /* GoogleService-Info.plist */,
 				B8A12A16224A458400F4132D /* Info.plist */,
@@ -171,6 +181,8 @@
 				0086C8B72265EA8700213626 /* TrainingMakeListViewController.xib */,
 				00DD9EBD22688B6D00AA8CA4 /* SaveApproachViewController.swift */,
 				00DD9EBE22688B6D00AA8CA4 /* SaveApproachViewController.xib */,
+				B8BB92EC229E61A800486484 /* CountdownViewController.swift */,
+				B8BB92ED229E61A800486484 /* CountdownViewController.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -254,8 +266,11 @@
 			files = (
 				0086C8B92265EA8700213626 /* TrainingMakeListViewController.xib in Resources */,
 				B82AFBA522536EE5007DD650 /* ProfileViewController.xib in Resources */,
+				B8BB92F6229EA9E600486484 /* timer.mp3 in Resources */,
 				B8A12A25224A497A00F4132D /* AuthViewController.xib in Resources */,
 				B8A12A15224A458400F4132D /* LaunchScreen.storyboard in Resources */,
+				B8BB92F9229EAA6500486484 /* timer_img.png in Resources */,
+				B8BB92EF229E61A800486484 /* CountdownViewController.xib in Resources */,
 				B82AFBA122536ECF007DD650 /* TrainingTableViewController.xib in Resources */,
 				B815EA68225CAE7800FADDC5 /* GoogleService-Info.plist in Resources */,
 				B8C550A4229D72AC00F2E7FE /* CurrentTrainingCell.xib in Resources */,
@@ -345,6 +360,7 @@
 				00DD9EC422788F4B00AA8CA4 /* FirebaseService.swift in Sources */,
 				B8A12A2B224A4DC300F4132D /* LocalModel.swift in Sources */,
 				B82AFBA022536ECF007DD650 /* TrainingTableViewController.swift in Sources */,
+				B8BB92EE229E61A800486484 /* CountdownViewController.swift in Sources */,
 				0086C8C822661CE700213626 /* CollectionViewCell.swift in Sources */,
 				B89C51A82255ED5000244DBF /* TrainingCell.swift in Sources */,
 				B85056BF22814AAA00FA62B3 /* ExerciseTableViewController.swift in Sources */,

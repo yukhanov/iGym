@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="repeatsTextField" destination="cNY-qd-K6K" id="EJp-rU-fsX"/>
                 <outlet property="tableView" destination="lJb-vZ-8m9" id="TUZ-ns-9uf"/>
+                <outlet property="timerButton" destination="UWk-XB-uoe" id="Yc5-at-sLw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weightTextField" destination="USp-x3-Q04" id="e8q-dV-zLc"/>
             </connections>
@@ -45,23 +46,34 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="USp-x3-Q04">
-                    <rect key="frame" x="158" y="272" width="98" height="30"/>
+                    <rect key="frame" x="158" y="272" width="98" height="50"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lJb-vZ-8m9">
-                    <rect key="frame" x="0.0" y="422" width="414" height="440"/>
+                    <rect key="frame" x="0.0" y="442" width="414" height="420"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s9-Gh-WeQ">
-                    <rect key="frame" x="150" y="342" width="114" height="30"/>
+                    <rect key="frame" x="150" y="362" width="114" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Rql-C3-c58"/>
                     </constraints>
                     <state key="normal" title="Записать"/>
                     <connections>
                         <action selector="recordButtonTapped:" destination="-1" eventType="touchUpInside" id="2VF-Rq-oYc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWk-XB-uoe">
+                    <rect key="frame" x="314" y="342" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="IeM-eG-8ag"/>
+                        <constraint firstAttribute="height" constant="50" id="nqW-Gl-7jC"/>
+                    </constraints>
+                    <state key="normal" title="Таймер"/>
+                    <connections>
+                        <action selector="timerTapped:" destination="-1" eventType="touchUpInside" id="xfG-NG-mbx"/>
                     </connections>
                 </button>
             </subviews>
@@ -72,12 +84,15 @@
                 <constraint firstItem="cNY-qd-K6K" firstAttribute="top" secondItem="E33-qX-o9R" secondAttribute="bottom" constant="20" id="2Fy-xr-cBl"/>
                 <constraint firstItem="1s9-Gh-WeQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2f9-A5-9SI"/>
                 <constraint firstItem="1s9-Gh-WeQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="150" id="5d9-i7-Dob"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UWk-XB-uoe" secondAttribute="trailing" constant="50" id="7pz-jv-5kV"/>
                 <constraint firstItem="cNY-qd-K6K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="158" id="AaO-Sh-TlD"/>
                 <constraint firstItem="lJb-vZ-8m9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FmK-C2-Zkr"/>
                 <constraint firstItem="lJb-vZ-8m9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="I9S-vf-qIp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="USp-x3-Q04" secondAttribute="trailing" constant="158" id="KDy-Py-Dya"/>
+                <constraint firstItem="lJb-vZ-8m9" firstAttribute="top" secondItem="UWk-XB-uoe" secondAttribute="bottom" constant="50" id="LbX-eo-F21"/>
                 <constraint firstItem="jwe-bb-VG8" firstAttribute="top" secondItem="cNY-qd-K6K" secondAttribute="bottom" constant="60" id="Lwz-9A-vkY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E33-qX-o9R" secondAttribute="trailing" constant="20" id="Mmx-rP-M9M"/>
+                <constraint firstItem="UWk-XB-uoe" firstAttribute="top" secondItem="jwe-bb-VG8" secondAttribute="bottom" constant="90" id="RyS-FN-oT0"/>
                 <constraint firstItem="E33-qX-o9R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Sme-I7-snG"/>
                 <constraint firstItem="1s9-Gh-WeQ" firstAttribute="top" secondItem="USp-x3-Q04" secondAttribute="bottom" constant="40" id="Uf5-7d-0bb"/>
                 <constraint firstItem="USp-x3-Q04" firstAttribute="top" secondItem="jwe-bb-VG8" secondAttribute="bottom" constant="20" id="VOA-jg-l9I"/>
