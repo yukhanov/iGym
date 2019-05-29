@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0086C8B42265A1B300213626 /* ExersciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086C8B22265A1B200213626 /* ExersciseTableViewCell.swift */; };
+		0086C8B82265EA8700213626 /* TrainingMakeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086C8B62265EA8700213626 /* TrainingMakeListViewController.swift */; };
+		0086C8B92265EA8700213626 /* TrainingMakeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0086C8B72265EA8700213626 /* TrainingMakeListViewController.xib */; };
+		0086C8BB2265ED8D00213626 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086C8BA2265ED8C00213626 /* Training.swift */; };
+		0086C8BF226607E000213626 /* ListExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086C8BE226607DF00213626 /* ListExercise.swift */; };
+		0086C8C822661CE700213626 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086C8C622661CE700213626 /* CollectionViewCell.swift */; };
+		0086C8C922661CE700213626 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0086C8C722661CE700213626 /* CollectionViewCell.xib */; };
+		00DD9EBB22684CA800AA8CA4 /* SetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD9EBA22684CA800AA8CA4 /* SetTableViewCell.swift */; };
+		00DD9EBF22688B6D00AA8CA4 /* SaveApproachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD9EBD22688B6D00AA8CA4 /* SaveApproachViewController.swift */; };
+		00DD9EC022688B6D00AA8CA4 /* SaveApproachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DD9EBE22688B6D00AA8CA4 /* SaveApproachViewController.xib */; };
+		00DD9EC22268900C00AA8CA4 /* CurrentAndPastTrainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD9EC12268900C00AA8CA4 /* CurrentAndPastTrainTableViewCell.swift */; };
+		00DD9EC422788F4B00AA8CA4 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD9EC322788F4A00AA8CA4 /* FirebaseService.swift */; };
+		02875A2019A69AE4CA2E0A7A /* Pods_iGym.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3664DE176C5F53E905C9EEB /* Pods_iGym.framework */; };
+		B815EA68225CAE7800FADDC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B815EA67225CAE7800FADDC5 /* GoogleService-Info.plist */; };
+		B82AFBA022536ECF007DD650 /* TrainingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82AFB9E22536ECF007DD650 /* TrainingTableViewController.swift */; };
+		B82AFBA122536ECF007DD650 /* TrainingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82AFB9F22536ECF007DD650 /* TrainingTableViewController.xib */; };
+		B82AFBA422536EE5007DD650 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82AFBA222536EE5007DD650 /* ProfileViewController.swift */; };
+		B82AFBA522536EE5007DD650 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82AFBA322536EE5007DD650 /* ProfileViewController.xib */; };
+		B85056BD22814A7B00FA62B3 /* ExerciseTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B85056BC22814A7B00FA62B3 /* ExerciseTableViewController.xib */; };
+		B85056BF22814AAA00FA62B3 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85056BE22814AAA00FA62B3 /* ExerciseTableViewController.swift */; };
+		B89C51A82255ED5000244DBF /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C51A72255ED5000244DBF /* TrainingCell.swift */; };
+		B8A12A0B224A458000F4132D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A12A0A224A458000F4132D /* AppDelegate.swift */; };
+		B8A12A12224A458400F4132D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A12A11224A458400F4132D /* Assets.xcassets */; };
+		B8A12A15224A458400F4132D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A12A13224A458400F4132D /* LaunchScreen.storyboard */; };
+		B8A12A24224A497A00F4132D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A12A22224A497A00F4132D /* AuthViewController.swift */; };
+		B8A12A25224A497A00F4132D /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8A12A23224A497A00F4132D /* AuthViewController.xib */; };
+		B8A12A27224A4BB400F4132D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A12A26224A4BB400F4132D /* CustomButton.swift */; };
+		B8A12A2B224A4DC300F4132D /* LocalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A12A2A224A4DC300F4132D /* LocalModel.swift */; };
+		B8A12A2D224A4E4600F4132D /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A12A2C224A4E4600F4132D /* Exercise.swift */; };
+		B8C550A4229D72AC00F2E7FE /* CurrentTrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C550A3229D72AC00F2E7FE /* CurrentTrainingCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0086C8B22265A1B200213626 /* ExersciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExersciseTableViewCell.swift; sourceTree = "<group>"; };
+		0086C8B62265EA8700213626 /* TrainingMakeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMakeListViewController.swift; sourceTree = "<group>"; };
+		0086C8B72265EA8700213626 /* TrainingMakeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingMakeListViewController.xib; sourceTree = "<group>"; };
+		0086C8BA2265ED8C00213626 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		0086C8BE226607DF00213626 /* ListExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExercise.swift; sourceTree = "<group>"; };
+		0086C8C622661CE700213626 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		0086C8C722661CE700213626 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		00DD9EBA22684CA800AA8CA4 /* SetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTableViewCell.swift; sourceTree = "<group>"; };
+		00DD9EBD22688B6D00AA8CA4 /* SaveApproachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveApproachViewController.swift; sourceTree = "<group>"; };
+		00DD9EBE22688B6D00AA8CA4 /* SaveApproachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveApproachViewController.xib; sourceTree = "<group>"; };
+		00DD9EC12268900C00AA8CA4 /* CurrentAndPastTrainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAndPastTrainTableViewCell.swift; sourceTree = "<group>"; };
+		00DD9EC322788F4A00AA8CA4 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		B3664DE176C5F53E905C9EEB /* Pods_iGym.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iGym.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B815EA67225CAE7800FADDC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B815EA692260630A00FADDC5 /* iGym.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iGym.entitlements; sourceTree = "<group>"; };
+		B82AFB9E22536ECF007DD650 /* TrainingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewController.swift; sourceTree = "<group>"; };
+		B82AFB9F22536ECF007DD650 /* TrainingTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingTableViewController.xib; sourceTree = "<group>"; };
+		B82AFBA222536EE5007DD650 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B82AFBA322536EE5007DD650 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		B85056BC22814A7B00FA62B3 /* ExerciseTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseTableViewController.xib; sourceTree = "<group>"; };
+		B85056BE22814AAA00FA62B3 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
+		B89C51A72255ED5000244DBF /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
+		B8A12A07224A458000F4132D /* iGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A12A0A224A458000F4132D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8A12A11224A458400F4132D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8A12A14224A458400F4132D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8A12A16224A458400F4132D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8A12A22224A497A00F4132D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		B8A12A23224A497A00F4132D /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		B8A12A26224A4BB400F4132D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B8A12A2A224A4DC300F4132D /* LocalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalModel.swift; sourceTree = "<group>"; };
+		B8A12A2C224A4E4600F4132D /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		B8C550A3229D72AC00F2E7FE /* CurrentTrainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentTrainingCell.xib; sourceTree = "<group>"; };
+		C7F2E1EB4E68F71FAA96E408 /* Pods-iGym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGym.release.xcconfig"; path = "Pods/Target Support Files/Pods-iGym/Pods-iGym.release.xcconfig"; sourceTree = "<group>"; };
+		E05F0F262794423968C205C6 /* Pods-iGym.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGym.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iGym/Pods-iGym.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8A12A04224A458000F4132D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02875A2019A69AE4CA2E0A7A /* Pods_iGym.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00DD9EBC226888E900AA8CA4 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				0086C8B22265A1B200213626 /* ExersciseTableViewCell.swift */,
+				B89C51A72255ED5000244DBF /* TrainingCell.swift */,
+				0086C8C622661CE700213626 /* CollectionViewCell.swift */,
+				0086C8C722661CE700213626 /* CollectionViewCell.xib */,
+				00DD9EBA22684CA800AA8CA4 /* SetTableViewCell.swift */,
+				00DD9EC12268900C00AA8CA4 /* CurrentAndPastTrainTableViewCell.swift */,
+				B8C550A3229D72AC00F2E7FE /* CurrentTrainingCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		0C9F54D5FB68E74E4B22F026 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E05F0F262794423968C205C6 /* Pods-iGym.debug.xcconfig */,
+				C7F2E1EB4E68F71FAA96E408 /* Pods-iGym.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		273932FE18C3E4C9314326FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3664DE176C5F53E905C9EEB /* Pods_iGym.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8A129FE224A458000F4132D = {
+			isa = PBXGroup;
+			children = (
+				B8A12A09224A458000F4132D /* iGym */,
+				B8A12A08224A458000F4132D /* Products */,
+				0C9F54D5FB68E74E4B22F026 /* Pods */,
+				273932FE18C3E4C9314326FC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B8A12A08224A458000F4132D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8A12A07224A458000F4132D /* iGym.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8A12A09224A458000F4132D /* iGym */ = {
+			isa = PBXGroup;
+			children = (
+				B815EA692260630A00FADDC5 /* iGym.entitlements */,
+				B8A12A29224A4D5E00F4132D /* Model */,
+				B8A12A28224A4D2B00F4132D /* Screens */,
+				B8A12A0A224A458000F4132D /* AppDelegate.swift */,
+				B8A12A26224A4BB400F4132D /* CustomButton.swift */,
+				B8A12A11224A458400F4132D /* Assets.xcassets */,
+				B8A12A13224A458400F4132D /* LaunchScreen.storyboard */,
+				B815EA67225CAE7800FADDC5 /* GoogleService-Info.plist */,
+				B8A12A16224A458400F4132D /* Info.plist */,
+				00DD9EC322788F4A00AA8CA4 /* FirebaseService.swift */,
+			);
+			path = iGym;
+			sourceTree = "<group>";
+		};
+		B8A12A28224A4D2B00F4132D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				00DD9EBC226888E900AA8CA4 /* cells */,
+				B8A12A22224A497A00F4132D /* AuthViewController.swift */,
+				B8A12A23224A497A00F4132D /* AuthViewController.xib */,
+				B85056BC22814A7B00FA62B3 /* ExerciseTableViewController.xib */,
+				B85056BE22814AAA00FA62B3 /* ExerciseTableViewController.swift */,
+				B82AFB9E22536ECF007DD650 /* TrainingTableViewController.swift */,
+				B82AFB9F22536ECF007DD650 /* TrainingTableViewController.xib */,
+				B82AFBA222536EE5007DD650 /* ProfileViewController.swift */,
+				B82AFBA322536EE5007DD650 /* ProfileViewController.xib */,
+				0086C8B62265EA8700213626 /* TrainingMakeListViewController.swift */,
+				0086C8B72265EA8700213626 /* TrainingMakeListViewController.xib */,
+				00DD9EBD22688B6D00AA8CA4 /* SaveApproachViewController.swift */,
+				00DD9EBE22688B6D00AA8CA4 /* SaveApproachViewController.xib */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B8A12A29224A4D5E00F4132D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B8A12A2A224A4DC300F4132D /* LocalModel.swift */,
+				B8A12A2C224A4E4600F4132D /* Exercise.swift */,
+				0086C8BA2265ED8C00213626 /* Training.swift */,
+				0086C8BE226607DF00213626 /* ListExercise.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8A12A06224A458000F4132D /* iGym */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8A12A19224A458400F4132D /* Build configuration list for PBXNativeTarget "iGym" */;
+			buildPhases = (
+				D10F0E02C3347E2022FA4B67 /* [CP] Check Pods Manifest.lock */,
+				B8A12A03224A458000F4132D /* Sources */,
+				B8A12A04224A458000F4132D /* Frameworks */,
+				B8A12A05224A458000F4132D /* Resources */,
+				8158DEE8AA082F6B39A11C55 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iGym;
+			productName = iGym;
+			productReference = B8A12A07224A458000F4132D /* iGym.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8A129FF224A458000F4132D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Юханов Сергей Сергеевич";
+				TargetAttributes = {
+					B8A12A06224A458000F4132D = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B8A12A02224A458000F4132D /* Build configuration list for PBXProject "iGym" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8A129FE224A458000F4132D;
+			productRefGroup = B8A12A08224A458000F4132D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8A12A06224A458000F4132D /* iGym */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8A12A05224A458000F4132D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0086C8B92265EA8700213626 /* TrainingMakeListViewController.xib in Resources */,
+				B82AFBA522536EE5007DD650 /* ProfileViewController.xib in Resources */,
+				B8A12A25224A497A00F4132D /* AuthViewController.xib in Resources */,
+				B8A12A15224A458400F4132D /* LaunchScreen.storyboard in Resources */,
+				B82AFBA122536ECF007DD650 /* TrainingTableViewController.xib in Resources */,
+				B815EA68225CAE7800FADDC5 /* GoogleService-Info.plist in Resources */,
+				B8C550A4229D72AC00F2E7FE /* CurrentTrainingCell.xib in Resources */,
+				00DD9EC022688B6D00AA8CA4 /* SaveApproachViewController.xib in Resources */,
+				0086C8C922661CE700213626 /* CollectionViewCell.xib in Resources */,
+				B8A12A12224A458400F4132D /* Assets.xcassets in Resources */,
+				B85056BD22814A7B00FA62B3 /* ExerciseTableViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8158DEE8AA082F6B39A11C55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iGym/Pods-iGym-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iGym/Pods-iGym-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D10F0E02C3347E2022FA4B67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iGym-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8A12A03224A458000F4132D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DD9EC22268900C00AA8CA4 /* CurrentAndPastTrainTableViewCell.swift in Sources */,
+				0086C8BF226607E000213626 /* ListExercise.swift in Sources */,
+				B8A12A27224A4BB400F4132D /* CustomButton.swift in Sources */,
+				0086C8B42265A1B300213626 /* ExersciseTableViewCell.swift in Sources */,
+				00DD9EC422788F4B00AA8CA4 /* FirebaseService.swift in Sources */,
+				B8A12A2B224A4DC300F4132D /* LocalModel.swift in Sources */,
+				B82AFBA022536ECF007DD650 /* TrainingTableViewController.swift in Sources */,
+				0086C8C822661CE700213626 /* CollectionViewCell.swift in Sources */,
+				B89C51A82255ED5000244DBF /* TrainingCell.swift in Sources */,
+				B85056BF22814AAA00FA62B3 /* ExerciseTableViewController.swift in Sources */,
+				B8A12A24224A497A00F4132D /* AuthViewController.swift in Sources */,
+				0086C8BB2265ED8D00213626 /* Training.swift in Sources */,
+				B8A12A0B224A458000F4132D /* AppDelegate.swift in Sources */,
+				B8A12A2D224A4E4600F4132D /* Exercise.swift in Sources */,
+				B82AFBA422536EE5007DD650 /* ProfileViewController.swift in Sources */,
+				00DD9EBB22684CA800AA8CA4 /* SetTableViewCell.swift in Sources */,
+				00DD9EBF22688B6D00AA8CA4 /* SaveApproachViewController.swift in Sources */,
+				0086C8B82265EA8700213626 /* TrainingMakeListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B8A12A13224A458400F4132D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8A12A14224A458400F4132D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8A12A17224A458400F4132D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8A12A18224A458400F4132D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8A12A1A224A458400F4132D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E05F0F262794423968C205C6 /* Pods-iGym.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iGym/iGym.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N66WY3RBB9;
+				INFOPLIST_FILE = iGym/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yukhanov.iGym;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8A12A1B224A458400F4132D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7F2E1EB4E68F71FAA96E408 /* Pods-iGym.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iGym/iGym.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N66WY3RBB9;
+				INFOPLIST_FILE = iGym/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yukhanov.iGym;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8A12A02224A458000F4132D /* Build configuration list for PBXProject "iGym" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8A12A17224A458400F4132D /* Debug */,
+				B8A12A18224A458400F4132D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8A12A19224A458400F4132D /* Build configuration list for PBXNativeTarget "iGym" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8A12A1A224A458400F4132D /* Debug */,
+				B8A12A1B224A458400F4132D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8A129FF224A458000F4132D /* Project object */;
+}
