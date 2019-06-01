@@ -12,7 +12,7 @@ class TrainingMakeListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var today: [String] = [] 
+    //var today: [String] = [] 
       
     
     override func viewDidLoad() {

@@ -39,7 +39,7 @@ class SaveApproachViewController: UIViewController {
         
         currentTrain = Exercise(type: currentExercise!, count: [], weight: [])
         // Do any additional setup after loading the view.
-        repeatsTextField.becomeFirstResponder()
+        weightTextField.becomeFirstResponder()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -79,9 +79,16 @@ class SaveApproachViewController: UIViewController {
    
     }
 
+    @IBAction func weightTF(_ sender: UITextField) {
+        if sender.text!.count == 3 {
+            repeatsTextField.becomeFirstResponder()
+        }
+    }
+    
+    
     @IBAction func repeatTF(_ sender: UITextField) {
         if sender.text!.count == 2 {
-            weightTextField.becomeFirstResponder()
+            view.endEditing(true)
         }
     }
     

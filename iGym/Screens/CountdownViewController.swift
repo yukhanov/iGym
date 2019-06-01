@@ -59,8 +59,6 @@ class CountdownViewController: UIViewController {
         label.text = String(seconds) + " секунд"
         if (seconds == 0) {
             timer.invalidate()
-            sliderOutlet.isHidden = false
-            startButton.isHidden = false
             audioPlayer.play()
         }
     }
