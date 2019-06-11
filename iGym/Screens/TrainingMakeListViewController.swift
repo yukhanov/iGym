@@ -31,8 +31,22 @@ class TrainingMakeListViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
+        
+       // let navItem = UINavigationItem(title: "SomeTitle")
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(saveTraining))
+        navigationItem.rightBarButtonItem = doneItem
+        
+       // navigationController?.navigationBar.setItems([navItem], animated: false)
+      
     }
 
+    @objc func saveTraining() {
+        LocalModel.trainingList.append(LocalModel.currentTraining!)
+        let jsonData = try! JSONEncoder().encode(LocalModel.trainingList)
+        let jsonString = String(data: jsonData, encoding: .utf8)!
+        print(jsonString + "hello")
+    
+    }
 }
 
 extension TrainingMakeListViewController: UITableViewDataSource {
