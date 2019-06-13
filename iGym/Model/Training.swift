@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Training: Encodable {
+struct Training: Encodable, Decodable {
     var date: String
     var exerciseArray: [Exercise]
 }

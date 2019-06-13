@@ -292,7 +292,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iGym/Pods-iGym-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-iGym/Pods-iGym-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -321,7 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iGym/Pods-iGym-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iGym/Pods-iGym-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D10F0E02C3347E2022FA4B67 /* [CP] Check Pods Manifest.lock */ = {

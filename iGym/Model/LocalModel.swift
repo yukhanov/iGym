@@ -20,7 +20,33 @@ class LocalModel {
         }
     }
     
-    static var trainingList: [Training] = []
+    static var trainingList: [Training] {
+        get {
+//            let jsonString = UserDefaults.standard.string(forKey: "trainingList") ?? ""
+//            print(jsonString)
+//        //    let jsonData: Data = Data(base64Encoded: jsonString)!
+//           var json: [Training] = []
+////            do {
+//                json = try JSONDecoder().decode([Training].self, from: jsonData)
+//            } catch (let error) {
+//                print(error)
+            if let data = UserDefaults.standard.value(forKey:"trainingList") as? Data {
+                let json = try? PropertyListDecoder().decode(Array<Training>.self, from: data)
+                print(json)
+                return json!
+            } else {
+                return []
+            }
+//            }
+            
+        }
+        set {
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(newValue), forKey:"TrainingList")
+//            let jsonData = try! JSONEncoder().encode(newValue)
+//            let jsonString = String(data: jsonData, encoding: .utf8)!
+//            UserDefaults.standard.set(jsonString, forKey: "trainingList")
+        }
+    }
     static var currentTraining: Training?
     
     static var signIn: String? {
