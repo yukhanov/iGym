@@ -72,7 +72,7 @@ class SaveApproachViewController: UIViewController {
             currentTrain!.weight.append(Int(weights)!)
         }
         
-        LocalModel.currentTraining?.exerciseArray.append(currentTrain!)
+        LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.append(currentTrain!)
         tableView.reloadData()
         print(currentTrain)
     
@@ -100,13 +100,13 @@ extension SaveApproachViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return LocalModel.currentTraining?.exerciseArray.last?.weight.count ?? 0
+        return LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.last?.weight.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentPastCell", for: indexPath) as! CurrentAndPastTrainTableViewCell
-        cell.weightLabel?.text = String(LocalModel.currentTraining?.exerciseArray.last?.weight[indexPath.row] ?? 0)
-        cell.countLabel?.text = String(LocalModel.currentTraining?.exerciseArray.last?.count[indexPath.row] ?? 0)
+        cell.weightLabel?.text = String(LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.last?.weight[indexPath.row] ?? 0)
+        cell.countLabel?.text = String(LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.last?.count[indexPath.row] ?? 0)
         return cell
     }
 }

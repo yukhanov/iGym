@@ -55,12 +55,13 @@ class TrainingTableViewController: UITableViewController {
                 print(textField.text!)
                // let trainingDate = Training.init(date: textField.text!, exerciseArray: [])
                 LocalModel.currentTraining = Training.init(date: textField.text!, exerciseArray: [])
-                LocalModel.trainingList.append(LocalModel.currentTraining!)
+                print(LocalModel.currentTraining)
+                LocalModel.trainingList.append(LocalModel.currentTraining)
                 //self.trainingArray.append(textField.text!)
                 self.tableView.reloadData()
                 
                 
-                FirebaseService.instance.saveCurrentTraining()
+         //       FirebaseService.instance.saveCurrentTraining()
                 
                 let dayVC = TrainingMakeListViewController()
                 self.show(dayVC, sender: nil)
@@ -91,6 +92,7 @@ class TrainingTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        LocalModel.currentTrainingIndex = indexPath.row
         let dayVC = TrainingMakeListViewController()
         self.show(dayVC, sender: nil)
     }

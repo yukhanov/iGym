@@ -41,27 +41,26 @@ class TrainingMakeListViewController: UIViewController {
     }
 
     @objc func saveTraining() {
-        LocalModel.trainingList.append(LocalModel.currentTraining!)
-        let jsonData = try! JSONEncoder().encode(LocalModel.trainingList)
-        let jsonString = String(data: jsonData, encoding: .utf8)!
-        print(jsonString + "hello")
+        LocalModel.trainingList.append(LocalModel.currentTraining)
+
+        FirebaseService.instance.saveCurrentTraining()
     
     }
 }
 
 extension TrainingMakeListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return LocalModel.currentTraining!.exerciseArray.count //LocalModel.trainingList.last!.exerciseArray.count
+        return LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.count //LocalModel.trainingList.last!.exerciseArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SetTrainCell", for: indexPath) as! SetTableViewCell
-        cell.exLabel.text = LocalModel.currentTraining!.exerciseArray[indexPath.row].type
+        cell.exLabel.text = LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray[indexPath.row].type
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let saveApproachVC = SaveApproachViewController()
-        saveApproachVC.currentExercise = LocalModel.currentTraining!.exerciseArray[indexPath.row].type
+        saveApproachVC.currentExercise = LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray[indexPath.row].type
         show(saveApproachVC, sender: nil)
     }
 }
@@ -74,7 +73,7 @@ extension TrainingMakeListViewController:  UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        print(indexPath.row)
         var currentExercise = Exercise(type: ListExercise.exerciseArray[indexPath.row], count: [0], weight: [0])
-        LocalModel.currentTraining!.exerciseArray.append(currentExercise)
+        LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.append(currentExercise)
         tableView.reloadData()
        print(currentExercise)
     }
@@ -94,7 +93,7 @@ extension TrainingMakeListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            LocalModel.currentTraining!.exerciseArray.remove(at: indexPath.row)
+            LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }

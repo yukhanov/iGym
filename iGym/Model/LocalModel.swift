@@ -41,13 +41,14 @@ class LocalModel {
             
         }
         set {
-            UserDefaults.standard.set(try? PropertyListEncoder().encode(newValue), forKey:"TrainingList")
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(newValue), forKey:"trainingList")
 //            let jsonData = try! JSONEncoder().encode(newValue)
 //            let jsonString = String(data: jsonData, encoding: .utf8)!
 //            UserDefaults.standard.set(jsonString, forKey: "trainingList")
         }
     }
-    static var currentTraining: Training?
+    static var currentTraining: Training = Training(date: "", exerciseArray: [])
+    static var currentTrainingIndex: Int = 0
     
     static var signIn: String? {
         get {
