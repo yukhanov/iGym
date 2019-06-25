@@ -18,12 +18,14 @@ class TrainingMakeListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ListExercise.collectionList = ListExercise.group
+        
         tableView.register(SetTableViewCell.self, forCellReuseIdentifier: "SetTrainCell")
         
      //register UINib
         let cellNib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: "CollectionViewCell")
-        
+        print(LocalModel.trainingList[LocalModel.currentTrainingIndex])
        
         tableView.delegate = self
         tableView.dataSource = self
@@ -67,22 +69,52 @@ extension TrainingMakeListViewController: UITableViewDataSource {
 
 extension TrainingMakeListViewController:  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ListExercise.exerciseArray.count
+        return ListExercise.collectionList.count
+    }
+    
+    private func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+            
+        case UICollectionView.elementKindSectionHeader:
+            
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath as IndexPath)
+            
+            headerView.backgroundColor = UIColor.blue
+            return headerView
+            
+        case UICollectionView.elementKindSectionFooter:
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath as IndexPath)
+            
+            footerView.backgroundColor = UIColor.green
+            return footerView
+            
+        default:
+            
+            assert(false, "Unexpected element kind")
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       print(indexPath.row)
-        var currentExercise = Exercise(type: ListExercise.exerciseArray[indexPath.row], count: [0], weight: [0])
-        LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.append(currentExercise)
-        tableView.reloadData()
-       print(currentExercise)
+      
+        
+        if ListExercise.collectionList == ListExercise.group {
+            ListExercise.collectionList = ListExercise.exerciseArray
+            collectionView.reloadData()
+        } else {
+            var currentExercise = Exercise(type: ListExercise.exerciseArray[indexPath.row], count: [0], weight: [0])
+            LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.append(currentExercise)
+            tableView.reloadData()
+
+        }
+       
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
 
-        cell.nameLabel.text = ListExercise.exerciseArray[indexPath.row]
+        cell.nameLabel.text = ListExercise.collectionList[indexPath.row]
         return cell
     }
     

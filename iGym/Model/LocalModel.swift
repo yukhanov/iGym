@@ -32,7 +32,7 @@ class LocalModel {
 //                print(error)
             if let data = UserDefaults.standard.value(forKey:"trainingList") as? Data {
                 let json = try? PropertyListDecoder().decode(Array<Training>.self, from: data)
-                print(json)
+               
                 return json!
             } else {
                 return []
@@ -58,14 +58,5 @@ class LocalModel {
             UserDefaults.standard.set(newValue, forKey: "signIn")
         }
     }
-//        static var dictionaryExercise: [String: String] = ["id1": "Жим лежа", "id2": "Армейский жим", "id3": "Становая тяга", "id4": "Присед", "id5": "Отведение гантелей назад в наклоне"]
-   
-//    var name: String
-//    var weight: Int
-//    var gender: String
-//    var age: Int
-//    var height: Int
-//    init(json: JSON) {
-//        <#statements#>
-//    }
+
 }

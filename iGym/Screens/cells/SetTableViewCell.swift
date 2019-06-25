@@ -16,7 +16,7 @@ class SetTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // code common to all your cells goes here
         self.addSubview(exLabel)
-        print("INIT")
+   
         
         
     }

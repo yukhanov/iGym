@@ -17,7 +17,7 @@ class TrainingCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // code common to all your cells goes here
         self.addSubview(dateLabel)
-        print("INIT")
+       
 
         
     }

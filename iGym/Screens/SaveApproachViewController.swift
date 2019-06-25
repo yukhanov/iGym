@@ -74,7 +74,7 @@ class SaveApproachViewController: UIViewController {
         
         LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.append(currentTrain!)
         tableView.reloadData()
-        print(currentTrain)
+
     
    
     }

@@ -11,14 +11,14 @@ import Firebase
 import SwiftyJSON
 
 
-class FirebaseService {
+class FirebaseService: Encodable, Decodable {
     
     
     
     func createUser(data:[String: Any]) {
         if let uid = Auth.auth().currentUser?.uid {
             let childUpdates = ["/Users/\(uid)": data]
-            print(data, uid)
+           
             LocalModel.signIn = "ok"
             LocalModel.id = uid
             ref.updateChildValues(childUpdates)
@@ -38,16 +38,22 @@ class FirebaseService {
     func saveCurrentTraining() {
         if let uid = Auth.auth().currentUser?.uid {
             let jsonData = try! JSONEncoder().encode(LocalModel.trainingList)
-            let jsonDictionary = try! JSON(data: jsonData).dictionaryObject
+            let jsonDictionary = try! JSON(data: jsonData).dictionaryValue
             let jsonString = String(data: jsonData, encoding: .utf8)!
-            print(jsonString + "hello")
+        
             
+//            var dictionary: [String: Any]? {
+//                return (try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)).flatMap { $0 as? [String: Any] }
+//            }
+//
+//
+            print(jsonDictionary)
             let key = ref.child("Users").child(uid).childByAutoId().key!
             //let post = ["uid": "1212121",
 //                        "author": "geekbrains",
 //                        "title": "less6",
 //                        "body": updateText.text!]
-            let childUpdates = ["/Users/\(uid)\(key)": jsonDictionary]
+            let childUpdates = ["/Users/\(uid)/\(key)": jsonString]
 //                                "/Tests/user-posts/1212121/\(key)/": post]
            ref.updateChildValues(childUpdates)
             
