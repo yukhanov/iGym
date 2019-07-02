@@ -108,7 +108,7 @@ extension TrainingMakeListViewController:  UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       
-        //здесь надо через свитч передавать заполнение коллекшена
+
        
         if ListExercise.collectionList == ListExercise.group {
             ListExercise.collectionList = ListExercise.exerciseArray

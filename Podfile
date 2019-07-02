@@ -17,5 +17,6 @@ pod 'FBSDKCoreKit', '4.36.0'
 pod 'FBSDKLoginKit', '4.36.0'
 pod 'FacebookCore', '0.4'
 pod 'FacebookLogin', '0.4'
+pod 'CodableFirebase'
 
 end

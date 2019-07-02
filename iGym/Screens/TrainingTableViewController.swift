@@ -16,6 +16,7 @@ class TrainingTableViewController: UITableViewController {
         super.viewDidLoad()
         
         
+        FirebaseService.instance.getTrainingList()
       
 
         // Uncomment the following line to preserve selection between presentations
@@ -54,7 +55,7 @@ class TrainingTableViewController: UITableViewController {
 
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             let textField = alert.textFields![0]
-            if textField.text != "" {
+            if textField.text != "" && !(textField.text?.contains(" "))! && textField.text != nil {
                 //Read textfield data
              
                // let trainingDate = Training.init(date: textField.text!, exerciseArray: [])
