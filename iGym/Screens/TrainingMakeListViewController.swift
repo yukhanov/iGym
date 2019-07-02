@@ -11,6 +11,7 @@ import UIKit
 class TrainingMakeListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var backToGroupButton: UIButton!
     
     //var today: [String] = [] 
       
@@ -19,6 +20,11 @@ class TrainingMakeListViewController: UIViewController {
         super.viewDidLoad()
         
         ListExercise.collectionList = ListExercise.group
+        
+        if ListExercise.collectionList == ListExercise.group {
+            backToGroupButton.isHidden = true
+        
+        }
         
         tableView.register(SetTableViewCell.self, forCellReuseIdentifier: "SetTrainCell")
         
@@ -48,6 +54,11 @@ class TrainingMakeListViewController: UIViewController {
         FirebaseService.instance.saveCurrentTraining()
     
     }
+    @IBAction func backToGroupButtonTapped(_ sender: UIButton) {
+        ListExercise.collectionList = ListExercise.group
+        backToGroupButton.isHidden = true
+        collectionView.reloadData()
+    }
 }
 
 extension TrainingMakeListViewController: UITableViewDataSource {
@@ -72,36 +83,39 @@ extension TrainingMakeListViewController:  UICollectionViewDelegate, UICollectio
         return ListExercise.collectionList.count
     }
     
-    private func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        
-        switch kind {
-            
-        case UICollectionView.elementKindSectionHeader:
-            
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath as IndexPath)
-            
-            headerView.backgroundColor = UIColor.blue
-            return headerView
-            
-        case UICollectionView.elementKindSectionFooter:
-            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath as IndexPath)
-            
-            footerView.backgroundColor = UIColor.green
-            return footerView
-            
-        default:
-            
-            assert(false, "Unexpected element kind")
-        }
-    }
+//    private func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+//        
+//        switch kind {
+//            
+//        case UICollectionView.elementKindSectionHeader:
+//            
+//            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath as IndexPath)
+//            
+//            headerView.backgroundColor = UIColor.blue
+//            return headerView
+//            
+//        case UICollectionView.elementKindSectionFooter:
+//            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath as IndexPath)
+//            
+//            footerView.backgroundColor = UIColor.green
+//            return footerView
+//            
+//        default:
+//            
+//            assert(false, "Unexpected element kind")
+//        }
+//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       
-        
+        //здесь надо через свитч передавать заполнение коллекшена
+       
         if ListExercise.collectionList == ListExercise.group {
             ListExercise.collectionList = ListExercise.exerciseArray
+            backToGroupButton.isHidden = false
             collectionView.reloadData()
         } else {
+            
             var currentExercise = Exercise(type: ListExercise.exerciseArray[indexPath.row], count: [0], weight: [0])
             LocalModel.trainingList[LocalModel.currentTrainingIndex].exerciseArray.append(currentExercise)
             tableView.reloadData()

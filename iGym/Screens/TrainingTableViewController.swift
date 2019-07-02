@@ -34,11 +34,12 @@ class TrainingTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        if LocalModel.signIn != nil {
-            alert = UIAlertController(title: "Загрузка профиля", message: "Подождите...", preferredStyle: .alert)
-            present(alert, animated: true, completion: nil)
-            FirebaseService.instance.getLocalUserProfile(id: LocalModel.id!, view: self)
-        }
+        //если нет сети, то постоянно висит алерт
+//        if LocalModel.signIn != nil {
+//            alert = UIAlertController(title: "Загрузка профиля", message: "Подождите...", preferredStyle: .alert)
+//            present(alert, animated: true, completion: nil)
+//            FirebaseService.instance.getLocalUserProfile(id: LocalModel.id!, view: self)
+//        }
     }
     
     @objc func addTraining() {

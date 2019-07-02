@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainingMakeListViewController" customModule="iGym" customModuleProvider="target">
             <connections>
+                <outlet property="backToGroupButton" destination="uUG-AJ-Z8L" id="uaS-9b-ftf"/>
                 <outlet property="collectionView" destination="q1J-zc-Rec" id="mlc-oc-c8v"/>
                 <outlet property="tableView" destination="U2Q-Lf-JJB" id="ZeY-9H-ZFr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,32 +23,46 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U2Q-Lf-JJB">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="426"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="U2Q-Lf-JJB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="562"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="426" id="Ghe-K5-6dg"/>
+                        <constraint firstAttribute="height" constant="562" id="Ghe-K5-6dg"/>
                     </constraints>
                 </tableView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="q1J-zc-Rec">
-                    <rect key="frame" x="0.0" y="426" width="414" height="436"/>
+                    <rect key="frame" x="0.0" y="570" width="414" height="292"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="50" id="cZC-VF-FgO">
                         <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="headerReferenceSize" width="50" height="50"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUG-AJ-Z8L">
+                    <rect key="frame" x="149" y="575" width="117" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="Hnd-8u-mpW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Группы мышц"/>
+                    <connections>
+                        <action selector="backToGroupButtonTapped:" destination="-1" eventType="touchUpInside" id="ncB-pZ-mbc"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="q1J-zc-Rec" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="6ic-7f-y2d"/>
+                <constraint firstItem="uUG-AJ-Z8L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="149" id="D7Y-cI-7Vq"/>
                 <constraint firstItem="q1J-zc-Rec" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Hya-No-P7U"/>
                 <constraint firstItem="q1J-zc-Rec" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Idy-g4-upi"/>
                 <constraint firstItem="U2Q-Lf-JJB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JAm-Ol-Q85"/>
+                <constraint firstItem="uUG-AJ-Z8L" firstAttribute="top" secondItem="U2Q-Lf-JJB" secondAttribute="bottom" constant="13" id="RBZ-JA-z2Z"/>
                 <constraint firstItem="U2Q-Lf-JJB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gLQ-gF-Eu6"/>
-                <constraint firstItem="q1J-zc-Rec" firstAttribute="top" secondItem="U2Q-Lf-JJB" secondAttribute="bottom" id="gS8-fj-1zw"/>
+                <constraint firstItem="q1J-zc-Rec" firstAttribute="top" secondItem="U2Q-Lf-JJB" secondAttribute="bottom" constant="8" id="gS8-fj-1zw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uUG-AJ-Z8L" secondAttribute="trailing" constant="148" id="nSK-3g-OzC"/>
                 <constraint firstItem="U2Q-Lf-JJB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="q3h-yA-9Vg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
